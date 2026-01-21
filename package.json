@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon ./server.js localhost 3000"
+    "start": "nodemon -e js,json,njk ./server.js localhost 3000"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "-": "^0.0.1",
     "D": "^1.0.0",
     "express": "^5.2.1",
-    "nodemon": "^3.1.11"
+    "nodemon": "^3.1.11",
+    "nunjucks": "^3.2.4"
   }
 }
