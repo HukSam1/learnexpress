@@ -1,0 +1,69 @@
+{% extends 'partials/layout.njk' %}
+{% block title %}
+    Form
+{% endblock %}
+{% block content %}
+    <h1>Form</h1>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="type..."></div>
+            <div class="mb-3">
+                <label for="bday" class="form-label">Birth date</label>
+                <input type="date" class="form-control" id="bday"></div>
+                <div class="mb-3">
+                    <label for="age" class="form-label">Weight</label>
+                    <textarea class="number" min="0" max="2000" id="bio" rows="1" placeholder="...kg"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="bio" class="form-label">Don't touch MY box!</label>
+                    <textarea class="form-control" id="bio" rows="3" placeholder="Thats not my box."></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="color" class="form-label">Color</label>
+                    <input type="color" class="form-control" id="color"></div>
+                    <div class="mb-3">
+                        <label for="checkbox" class="form-label">Rizzler?</label>
+                        <input type="checkbox" class="form-check-input" id="checkbox"></div>
+                        <div class="mb-3">
+                            <p>Choose 1</p>
+                            <input name="choose" type="radio" class="form-check-input" id="radio">
+                            <label for="radio" class="form-label">Mogger kid</label>
+                            <input name="choose" type="radio" class="form-check-input" id="radio">
+                            <label for="radio" class="form-label">67 kid</label>
+                            <input name="choose" type="radio" class="form-check-input" id="radio">
+                            <label for="radio" class="form-label">Speed</label>
+                            <input name="choose" type="radio" class="form-check-input" id="radio">
+                            <label for="radio" class="form-label">Tung Tung Sahur</label>
+                            <input name="choose" type="radio" class="form-check-input" id="radio">
+                            <label for="radio" class="form-label">Ballerina Cappochino</label>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fruit" class="form-label">Favorite fruit</label>
+                            <select name="fruit" id="fruit" class="form-select">
+                                <option disabled="disabled" selected="selected">-</option>
+                                <option>Banana</option>
+                                <option>Apple</option>
+                                <option>Cherry</option>
+                                <option>Cocomelon</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fruit" class="form-label">What languages do you know?</label>
+                            <select name="fruit multiple="multiple" id="fruit" class="form-select" size="5">
+                                <option disabled="disabled" selected="selected">-</option>
+                                <option>Estonian</option>
+                                <option>English</option>
+                                <option>German</option>
+                                <option>Spanish</option>
+                                <option>Finnish</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="like" class="form-label">Rate this form.</label>
+                            <input type="range" class="form-range" id="like"></div>
+                        </div>
+                        <input type="submit" class="btn btn-primary">
+                        <button class="btn btn-primary">Send</button>
+                    </form>
+                {% endblock %}

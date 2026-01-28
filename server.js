@@ -28,6 +28,10 @@ app.get('/contacts', (req, res) => {
   res.render('contacts.njk');
 });
 
+app.get('/form', (req, res) => {
+  res.render('form.njk');
+});
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
