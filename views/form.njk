@@ -4,16 +4,16 @@
 {% endblock %}
 {% block content %}
     <h1>Form</h1>
-    <form>
+    <form action="/answers">
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="type..."></div>
+            <input name="name" type="text" class="form-control" id="name" placeholder="type..."></div>
             <div class="mb-3">
                 <label for="bday" class="form-label">Birth date</label>
-                <input type="date" class="form-control" id="bday"></div>
+                <input name="bday" type="date" class="form-control" id="bday"></div>
                 <div class="mb-3">
-                    <label for="age" class="form-label">Weight</label>
-                    <textarea class="number" min="0" max="2000" id="bio" rows="1" placeholder="...kg"></textarea>
+                    <label for="weight" class="form-label">Weight</label>
+                    <input name="weight" type="number" class="form-control" min="0" max="2000" id="bio" rows="1" placeholder="...kg"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="bio" class="form-label">Don't touch MY box!</label>
@@ -21,21 +21,21 @@
                 </div>
                 <div class="mb-3">
                     <label for="color" class="form-label">Color</label>
-                    <input type="color" class="form-control" id="color"></div>
+                    <input name="color" type="color" class="form-control" id="color"></div>
                     <div class="mb-3">
                         <label for="checkbox" class="form-label">Rizzler?</label>
-                        <input type="checkbox" class="form-check-input" id="checkbox"></div>
+                        <input name="checkbox" type="checkbox" class="form-check-input" id="checkbox"></div>
                         <div class="mb-3">
                             <p>Choose 1</p>
-                            <input name="choose" type="radio" class="form-check-input" id="radio">
+                            <input name="choose" type="radio" class="form-check-input" id="Mogger kid" value="Mogger kid">
                             <label for="radio" class="form-label">Mogger kid</label>
-                            <input name="choose" type="radio" class="form-check-input" id="radio">
+                            <input name="choose" type="radio" class="form-check-input" id="67 kid" value="67 kid">
                             <label for="radio" class="form-label">67 kid</label>
-                            <input name="choose" type="radio" class="form-check-input" id="radio">
+                            <input name="choose" type="radio" class="form-check-input" id="Speed" value="Speed">
                             <label for="radio" class="form-label">Speed</label>
-                            <input name="choose" type="radio" class="form-check-input" id="radio">
+                            <input name="choose" type="radio" class="form-check-input" id="Tung tung sahur" value="Tung tung sahur">
                             <label for="radio" class="form-label">Tung Tung Sahur</label>
-                            <input name="choose" type="radio" class="form-check-input" id="radio">
+                            <input name="choose" type="radio" class="form-check-input" id="Ballerina Cappochino" value="Ballerina Cappochino">
                             <label for="radio" class="form-label">Ballerina Cappochino</label>
                         </div>
                         <div class="mb-3">
@@ -50,7 +50,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="fruit" class="form-label">What languages do you know?</label>
-                            <select name="fruit multiple="multiple" id="fruit" class="form-select" size="5">
+                            <select multiple name="fruit"  id="fruit" class="form-select" size="5">
                                 <option disabled="disabled" selected="selected">-</option>
                                 <option>Estonian</option>
                                 <option>English</option>

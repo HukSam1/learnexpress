@@ -1,0 +1,30 @@
+{% extends 'partials/layout.njk' %}
+{% block title %} Answers {% endblock %}
+{% block content %}
+   <h1>Answers</h1>
+   <table class="table">
+      <tbody>
+         <tr>
+
+            <th>Name</th>
+            <td>{{ name }}</td>
+            </tr>
+
+                     <tr>
+            <th>Birt date</th>
+            <td>{{ bday }}</td>
+            </tr>
+
+                     <tr>
+            <th>Weight</th>
+            <td>{{ weight }}</td>
+            </tr>
+
+                     <tr>
+            <th>Color</th>
+            <td>{{ color }}</td>
+            </tr>
+
+            </tbody>
+            </table>
+{% endblock %}
