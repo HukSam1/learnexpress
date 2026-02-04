@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Kitty",
+    "birthyear": 2022,
+    "gender": "Female",
+    "color": "brown/white",
+    "eyes": "green",
+    "spayed": true
+  },
+  {
+    "id": 2,
+    "name": "Findus",
+    "birthyear": 2025,
+    "gender": "Male",
+    "color": "white/black",
+    "eyes": "brown",
+    "spayed": true
+  }
+]

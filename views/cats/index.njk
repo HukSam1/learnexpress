@@ -1,0 +1,30 @@
+{% extends 'partials/layout.njk' %}
+{% block title %}Cats{% endblock %}
+{% block content %}
+    <h1>Cats</h1>
+    <a class="btn btn-primary" href="/cats/create">Add cat</a>
+    <table class="table table-striped table-hover">
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Birth Year</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            {% for cat in cats %}
+                <tr>
+                    <td>{{ cat.id }}</td>
+                    <td>{{ cat.name }}</td>
+                    <td>{{ cat.birthyear }}</td>
+                    <td>
+                        <div class="btn-group">
+                            <a href="/cats/view?id={{ cat.id }}" class="btn btn-info">View</a>
+                            <a href="/cats/edit?id={{ cat.id }}" class="btn btn-warning">Edit</a>
+                            <a href="/cats/delete?id={{ cat.id }}" class="btn btn-danger">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
