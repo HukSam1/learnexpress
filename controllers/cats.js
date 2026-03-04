@@ -1,11 +1,11 @@
 import express from 'express'
 import fs from 'fs';
+import { prisma } from "../lib/prisma.js";
 
 const router = express.Router();
 
-router.get('', (req, res) => {
-  let data = fs.readFileSync('cats.json', { encoding: 'utf-8' });
-  let cats = JSON.parse(data);
+router.get('',async (req, res) => {
+  let cats = await prisma.cat.findMany();
   res.render('cats/index.njk', { cats });
 });
 
