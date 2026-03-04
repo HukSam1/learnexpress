@@ -1,0 +1,21 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Cat {
+    id        Int      @id @default(autoincrement()) 
+    name      String
+    birthyear Int
+    gender    String
+    color     String
+    eyes      String
+    spayed    Boolean
+    }

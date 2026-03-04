@@ -19,8 +19,16 @@
   },
   "homepage": "https://github.com/HukSam1/learnexpress#readme",
   "dependencies": {
+    "@prisma/adapter-better-sqlite3": "^7.4.2",
+    "@prisma/client": "^7.4.2",
+    "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "nodemon": "^3.1.11",
     "nunjucks": "^3.2.4"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.3.3",
+    "prisma": "^7.4.2"
   }
 }
