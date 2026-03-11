@@ -5,8 +5,14 @@ import { prisma } from "../lib/prisma.js";
 const router = express.Router();
 
 router.get('', async (req, res) => {
-  let cats = await prisma.cat.findMany();
-  res.render('cats/index.njk', { cats });
+  let count = await prisma.cat.count();
+  let perPage = 10;
+  let pages = Math.cell(count / perPage); 
+  let cats = await prisma.cat.findMany({
+take: 10,
+skip: 10,
+  });
+  res.render('cats/index.njk', { cats, pages });
 });
 
 router.get('/create', (req, res) => {
