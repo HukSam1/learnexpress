@@ -5,9 +5,10 @@ import { prisma } from "../lib/prisma.js";
 const router = express.Router();
 
 router.get('', async (req, res) => {
+  console.log(req.session.userID);
   let count = await prisma.cat.count();
   let perPage = 10;
-  let pages = Math.cell(count / perPage); 
+  let pages = Math.ceil(count / perPage); 
   let cats = await prisma.cat.findMany({
 take: 10,
 skip: 10,
